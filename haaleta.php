@@ -1,10 +1,13 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 $conn = new mysqli(
     "localhost",
-    "root",
-    "",
-    "haaletus"
+    "vso25bulava_aksel",
+    "}K_{ODs%HN{,Gbfj",
+    "vso25bulava_haaletus"
 );
 
 $eesnimi = $_POST['eesnimi'];
@@ -80,6 +83,11 @@ $conn->query($sql);
 
 $conn->query("CALL uuenda_tulemused()");
 
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 header("Location: index.html");
+exit();
 
 ?>
