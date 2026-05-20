@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="refresh" content="5">
+    <title>Document</title>
+</head>
+    <body>
+
+        <div class="container">
+
+            <h1>Hääletamine</h1>
+
+            <form action="haaleta.php" method="POST">
+
+                <input 
+                type="text" 
+                name="Eesnimi" 
+                placeholder="Sisesta oma eesnimi"
+                required
+                >
+                <input 
+                type="text" 
+                name="Perenimi" 
+                placeholder="Sisesta oma perenimi"
+                required
+                >
+
+                <div class="buttons">
+
+                    <button 
+                    type="submit" 
+                    name="otsus" 
+                    value="Poolt"
+                    class="poolt"
+                    >
+                    Poolt
+                    </button>
+
+                    <button 
+                    type="submit" 
+                    name="otsus" 
+                    value="Vastu"
+                    class="vastu"
+                    >
+                    Vastu
+                    </button>
+
+                </div>
+
+            </form>
+
+            <div class="users">
+
+                <h2>Hääletajad</h2>
+                    
+                    <!-- <iframe 
+                        src="users.php"
+                        width="100%"
+                        height="300"
+                        style="border:none;"
+                    ></iframe> -->
+            </div>
+        </div>
+    </body>
+</html>
