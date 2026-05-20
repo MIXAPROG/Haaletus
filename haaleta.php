@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 
 $conn = new mysqli(
     "localhost",
-    "vso25bulava_vso25",
+    "vso25bulava_aksel",
     "}K_{ODs%HN{,Gbfj",
     "vso25bulava_haaletus"
 );

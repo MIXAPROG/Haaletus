@@ -2,9 +2,9 @@
 
 $conn = new mysqli(
     "localhost",
-    "root",
-    "",
-    "haaletus"
+    "vso25bulava_aksel",
+    "}K_{ODs%HN{,Gbfj",
+    "vso25bulava_haaletus"
 );
 
 $sql = "
