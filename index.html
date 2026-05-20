@@ -18,19 +18,20 @@
 
                 <input 
                 type="text" 
-                name="Eesnimi" 
+                name="eesnimi" 
                 placeholder="Sisesta oma eesnimi"
                 required
                 >
+            
                 <input 
                 type="text" 
-                name="Perenimi" 
+                name="perenimi" 
                 placeholder="Sisesta oma perenimi"
                 required
                 >
-
+            
                 <div class="buttons">
-
+            
                     <button 
                     type="submit" 
                     name="otsus" 
@@ -39,7 +40,7 @@
                     >
                     Poolt
                     </button>
-
+            
                     <button 
                     type="submit" 
                     name="otsus" 
@@ -48,22 +49,32 @@
                     >
                     Vastu
                     </button>
-
+            
                 </div>
-
+            
             </form>
 
             <div class="users">
 
                 <h2>Hääletajad</h2>
-                    
-                    <!-- <iframe 
-                        src="users.php"
-                        width="100%"
-                        height="300"
-                        style="border:none;"
-                    ></iframe> -->
+            
+                <div id="usersList"></div>
+            
             </div>
         </div>
+        <script>
+
+            function loadUsers(){
+            
+                fetch("users.php")
+                .then(response => response.text())
+                .then(data => {
+            
+                    document.getElementById("usersList").innerHTML = data;
+                });
+            }
+            loadUsers();
+            setInterval(loadUsers, 2000);
+            </script>
     </body>
 </html>

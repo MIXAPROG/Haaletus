@@ -8,7 +8,7 @@ $conn = new mysqli(
 );
 
 $sql = "
-SELECT Eesnimi, Otsus
+SELECT Eesnimi, Perenimi, Otsus
 FROM HAALETUS
 WHERE Otsus IS NOT NULL
 ORDER BY Aeg DESC
@@ -20,10 +20,13 @@ while($row = $result->fetch_assoc()){
 
     echo "
     <div class='user'>
-        <b>".$row['Eesnimi']."</b>
+        <b>
+        ".$row['Eesnimi']." ".$row['Perenimi']."
+        </b>
         : ".$row['Otsus']."
     </div>
     ";
+
 }
 
 ?>
